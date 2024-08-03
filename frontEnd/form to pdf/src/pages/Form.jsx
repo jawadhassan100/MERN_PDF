@@ -23,8 +23,8 @@ const Form = () => {
   };
 
   return (
-    <div className="p-4 mx-[450px] my-20">
-      <h1 className="text-2xl font-bold mb-4 ">Submit Your Form</h1>
+    <div className="p-4 max-w-md mx-auto my-20 ">
+      <h1 className="text-2xl font-bold mb-4 text-center">Submit Your Form</h1>
       <form onSubmit={handleSubmit} className="space-y-4 w-96">
         <label className="block">
           <span className="text-gray-700">Name:</span>
@@ -61,7 +61,7 @@ const Form = () => {
         </label>
         <button
           type="submit"
-          className="mt-4 p-2 bg-blue-500 text-white rounded"
+          className="mt-4 p-2 bg-blue-500 text-white rounded w-full"
         >
           Submit
         </button>

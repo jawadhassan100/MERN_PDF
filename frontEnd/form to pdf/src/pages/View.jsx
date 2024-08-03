@@ -49,17 +49,17 @@ const ShowAll = () => {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-4 flex justify-center mt-5">
+      <h1 className="text-2xl font-bold mb-4 flex justify-center mt-5 ">
         Form Details
       </h1>
       {formData.length > 0 ? (
-        <ul className="grid grid-cols-3">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {formData.map((item, index) => (
             <li key={index}>
               <div className="p-4  w-96    ">
                 <div className="border p-4 rounded shadow">
                   {" "}
-                  <h2 className="text-xl font-semibold mb-2">
+                  <h2 className="text-xl font-semibold mb-2 text-center">
                     Form Information
                   </h2>{" "}
                   <p>
