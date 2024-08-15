@@ -7,7 +7,7 @@ const ShowAll = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:4400/data");
+        const response = await axios.get("https://mern-pdf.vercel.app/data");
         setFormData(response.data.data);
       } catch (error) {
         console.error(error);
@@ -18,10 +18,10 @@ const ShowAll = () => {
 
   const handleDeleteBook = async (id) => {
     try {
-      await axios.delete(`http://localhost:4400/data/${id}`);
+      await axios.delete(`https://mern-pdf.vercel.app/data/${id}`);
       setFormData(formData.filter((item) => item.id !== id));
 
-      const response = await axios.get("http://localhost:4400/data");
+      const response = await axios.get("https://mern-pdf.vercel.app/data");
       setFormData(response.data.data);
       window.location.reload();
     } catch (error) {
@@ -31,7 +31,7 @@ const ShowAll = () => {
 
   const handleDownloadPDF = async (id) => {
       try {
-    const response = await axios.get(`http://localhost:4400/data/pdf/${id}`, {
+    const response = await axios.get(`https://mern-pdf.vercel.app/data/pdf/${id}`, {
       responseType: 'blob',
     });
 

@@ -14,7 +14,7 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:4400/data", formData);
+      const response = await axios.post("https://mern-pdf.vercel.app/data", formData);
       console.log(response);
       navigate(`/view`);
     } catch (error) {
