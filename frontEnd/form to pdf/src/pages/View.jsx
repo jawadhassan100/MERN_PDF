@@ -7,7 +7,7 @@ const ShowAll = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://mern-pdf.vercel.app/data");
+        const response = await axios.get("https://mern-pdf.vercel.app/data/");
         setFormData(response.data.data);
       } catch (error) {
         console.error(error);
@@ -21,7 +21,7 @@ const ShowAll = () => {
       await axios.delete(`https://mern-pdf.vercel.app/data/${id}`);
       setFormData(formData.filter((item) => item.id !== id));
 
-      const response = await axios.get("https://mern-pdf.vercel.app/data");
+      const response = await axios.get("https://mern-pdf.vercel.app/data/");
       setFormData(response.data.data);
       window.location.reload();
     } catch (error) {

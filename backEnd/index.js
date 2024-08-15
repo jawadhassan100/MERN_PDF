@@ -23,7 +23,7 @@ const dbURl = process.env.mongoDBURL;
 
 app.use(
   cors({
-    origin: "https://mern-pdf-front.vercel.app/",
+    origin: "https://mern-pdf-front.vercel.app",
     methods: ["GET", "PUT", "POST", "DELETE"],
     credentials: true,
   })
