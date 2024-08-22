@@ -19,7 +19,7 @@ const dbURl = process.env.mongoDBURL;
 
 
 // allow all origins with default of cors(*)
-// app.use(cors());
+//  app.use(cors());
 
 app.use(
   cors({
